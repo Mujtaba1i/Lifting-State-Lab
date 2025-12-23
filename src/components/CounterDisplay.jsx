@@ -1,8 +1,7 @@
-import { useState } from "react";
 import "./counter.css";
 
-function CounterDisplay() {
-    const [count, setCount] = useState(0)
+function CounterDisplay({count}) {
+
   return (
     <div className="counter-display">
       <p className="counter-label">Current Count</p>

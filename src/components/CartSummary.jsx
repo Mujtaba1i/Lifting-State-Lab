@@ -1,8 +1,7 @@
 import "./cart.css";
 import { useState } from "react";
 
-function CartSummary() {
-    const [cartCount, setCartCount] = useState(0);
+function CartSummary({cartCount, checkout}) {
 
   return (
     <div className="cart-summary">
@@ -13,7 +12,7 @@ function CartSummary() {
         </p>
       </div>
 
-      <button className="checkout-btn">Checkout →</button>
+      <button onClick={checkout} className="checkout-btn">Checkout →</button>
     </div>
   );
 }

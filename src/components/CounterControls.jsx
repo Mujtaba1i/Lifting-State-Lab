@@ -1,20 +1,18 @@
 import "./counter.css";
-import { useState } from "react";
 
-function CounterControls() {
-    const [count, setCount] = useState(0)
+function CounterControls({increaseCount, decreaseCount}) {
   return (
     <div className="counter-controls">
       <button
         className="btn secondary"
-        onClick={() => setCount(count-1)}
+        onClick={decreaseCount}
       >
-        −
+        -
       </button>
 
       <button
         className="btn primary"
-        onClick={() => setCount(count+1)}
+        onClick={increaseCount}
       >
         +
       </button>

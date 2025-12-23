@@ -1,8 +1,7 @@
 import "./cart.css";
 import { useState } from "react";
 
-function ProductList() {
-  const [cartCount, setCartCount] = useState(0);
+function ProductList({addToCart}) {
 
   const products = ["Burger", "Pizza", "Fries"];
 
@@ -16,7 +15,7 @@ function ProductList() {
             <span style={{color: 'grey'}}>{product}</span>
             <button
               className="add-btn"
-              onClick={() => setCartCount(cart + 1)}
+              onClick={addToCart}
             >
               Add to Cart
             </button>
